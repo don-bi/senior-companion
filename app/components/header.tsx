@@ -1,17 +1,55 @@
+"use client"
+
 import Link from "next/link"
 import styles from "./header.module.css";
+import { useEffect, useState } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 export default function Header() {
+    useEffect(() => {
+        const header = document.querySelector("header");
+        function checkScroll() {
+          if (header && window.scrollY > 0) {
+            header.classList.add(`${styles.scrolled}`);
+          }
+          if (header && window.scrollY === 0) {
+            header.classList.remove(`${styles.scrolled}`);
+          }
+        }
+        window.addEventListener("scroll", checkScroll);
+    })
+
+    const [hamburgerShow, setHamburgerShow] = useState("");
+
+
     return (
-    <header className={styles.header}>
-        <div className="text-white">LOGOLOGO</div>
-        <nav>
-            <ul className={styles.ul}>
-                <li><Link href={"/join"} className={styles.a}>Join Us</Link></li>
-                <li><Link href={"/about"} className={styles.a}>About Us</Link></li>
-                <li><Link href={"/join"} className={styles.a}>Join Us</Link></li>
-            </ul>
-        </nav>
-    </header>
+    <div>
+        <header className={styles.header}>
+            <Link href={"/"}>
+                <div className="text-white">LOGOLOGO</div>
+            </Link>
+            <nav className={styles.nav}>
+                <ul className={styles.ul}>
+                    <li><Link href={"/join"} className={styles.a}>Join Us</Link></li>
+                    <li><Link href={"/about"} className={styles.a}>About Us</Link></li>
+                    <li><Link href={"/join"} className={styles.a}>Join Us</Link></li>
+                </ul>
+            </nav>
+            <nav className={styles.mobile} onClick={()=> {
+                if (hamburgerShow === "") {
+                    setHamburgerShow(styles.show);
+                } else {
+                    setHamburgerShow("");
+                }
+            }}>
+                <GiHamburgerMenu size={30} fill="white"/>
+            </nav>
+        </header>
+        <ul className={`${styles.mobileul} ${hamburgerShow}`}>
+            <li className={styles.li}><Link href={"/join"} className={styles.a}>Join Us</Link></li>
+            <li className={styles.li}><Link href={"/about"} className={styles.a}>About Us</Link></li>
+            <li className={styles.li}><Link href={"/join"} className={styles.a}>Join Us</Link></li>
+        </ul>
+    </div>
     )
 }

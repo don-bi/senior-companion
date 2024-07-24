@@ -8,8 +8,6 @@ export default function RoundLinkButton({children, color="lightblue", href}: {ch
         yellow: "bg-yellow-500 hover:bg-yellow-700",
     }
 
-    console.log(colors[color])
-
     return (
         <button className={`${colors[color]} 
         px-8 py-4 

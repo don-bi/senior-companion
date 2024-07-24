@@ -28,5 +28,6 @@ body {
 
 * {
   overflow-x: hidden;
-  color: black
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
