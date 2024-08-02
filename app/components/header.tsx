@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import styles from "./header.module.css";
+import styles from "./styles/header.module.css";
 import { useEffect, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 
@@ -17,7 +17,7 @@ export default function Header() {
           }
         }
         window.addEventListener("scroll", checkScroll);
-    })
+    }, [])
 
     const [hamburgerShow, setHamburgerShow] = useState("");
 
@@ -30,9 +30,10 @@ export default function Header() {
             </Link>
             <nav className={styles.nav}>
                 <ul className={styles.ul}>
-                    <li><Link href={"/join"} className={styles.a}>Join Us</Link></li>
+                    <li><Link href={"/join"} className={styles.a}>Home</Link></li>
                     <li><Link href={"/about"} className={styles.a}>About Us</Link></li>
-                    <li><Link href={"/join"} className={styles.a}>Join Us</Link></li>
+                    <li><Link href={"/join"} className={styles.a}>Our Branches</Link></li>
+                    <li><Link href={"/join"} className={styles.a}>Contact Us</Link></li>
                 </ul>
             </nav>
             <nav className={styles.mobile} onClick={()=> {

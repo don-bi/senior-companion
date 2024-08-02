@@ -1,0 +1,25 @@
+.hidden {
+    opacity: 0;
+}
+
+.show {
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.ebony {
+    color: #593D3B;
+    fill: #593D3B;
+    font-weight: 700;
+    font-size: 1.6rem;
+}

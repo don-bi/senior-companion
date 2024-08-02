@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "./roundLinkButton.module.css";
+import styles from "./styles/roundLinkButton.module.css";
 
 export default function RoundLinkButton({children, color="lightblue", href}: {children: React.ReactNode, color: string, href: string}) {
     const colors: {[key: string]: string} = {

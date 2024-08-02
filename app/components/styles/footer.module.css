@@ -1,0 +1,30 @@
+.footer {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 4rem;
+    background-color: var(--umber);
+    color: var(--peach);
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+
+.mediaColors {
+    color: var(--peach);
+    fill: var(--peach);
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+
+.mediaColorsHover {
+    color:var(--peach-light);
+    fill: var(--peach-light);
+    transition-duration: 0.2s;
+}
+
+.motto {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-left: auto;
+    color: var(--peach);
+}

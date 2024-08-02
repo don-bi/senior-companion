@@ -8,7 +8,7 @@ export default function MediaLink({children, href, words, color, hoverColor}:
     const [colorClass, setColorClass] = useState(color);
     
     return (
-        <a href="https://www.instagram.com/perennialprep" 
+        <a href={href}
             onMouseOver={() => {
                 setColorClass(hoverColor)
             }}
@@ -18,7 +18,7 @@ export default function MediaLink({children, href, words, color, hoverColor}:
             className="flex items-center gap-2"
             >
                 {React.cloneElement(children as React.ReactElement<any>, { className: colorClass })}
-                <div className={colorClass}>@Seniorswhateverbl</div>
+                <div className={colorClass}>{words}</div>
             </a>
     )
 }
