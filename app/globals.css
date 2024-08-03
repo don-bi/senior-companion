@@ -22,14 +22,8 @@
   --rose-ebony: hsla(4, 20%, 29%, 1);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+html {
+  overflow-x: hidden;
 }
 
 @layer utilities {
@@ -39,7 +33,7 @@ body {
 }
 
 * {
-  overflow-x: hidden;
-  color: black;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* overflow-x: hidden; */
+  color: #334155;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }

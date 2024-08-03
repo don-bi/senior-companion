@@ -21,5 +21,6 @@
     color: #593D3B;
     fill: #593D3B;
     font-weight: 700;
-    font-size: 1.6rem;
+    font-size: 2rem;
+    text-shadow: #593D3B 1px 1px 1px;
 }

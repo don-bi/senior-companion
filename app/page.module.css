@@ -2,5 +2,14 @@
   position: relative;
   height: 100svh;
   background-color: var(--peach);
-  box-shadow: 0 -1px 3px 0 black;
+  box-shadow: 0 0px 7px -2px black;
+  overflow: hidden;
+}
+
+.statSection {
+  margin-left: -160px;
+}
+
+.shadow {
+  box-shadow: 1px 1px 7px -2px black;
 }

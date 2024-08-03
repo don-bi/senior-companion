@@ -28,7 +28,7 @@ export default function Statistics() {
                 }
             })
             
-        })
+        }, {threshold: 0.2})
     
         const container = document.querySelectorAll(".stat-container");
         container.forEach((c) => {
@@ -55,8 +55,8 @@ export default function Statistics() {
             }
             if (hoursOfService < totalHoursOfService) {
                 setTimeout(() => {
-                    setHoursOfService(hoursOfService + 1);
-                }, 10)
+                    setHoursOfService(hoursOfService + 4);
+                }, 5)
             }
         }
         if (increasing) increaseStats()
@@ -64,33 +64,36 @@ export default function Statistics() {
     }, [increasing, partneredCenters, students, adults, hoursOfService])
 
     return (
-        <div className={`stat-container ${styles.hidden} flex flex-col gap-5`}>
-            <div className="flex items-center gap-4">
-                <FaBuildingCircleCheck size={50} className={styles.ebony}/>
-                <div className="flex-col items-center justify-center">
-                    <p className={styles.ebony}>{partneredCenters}</p>
-                    <p className="text-medium text-slate-700">Partnered Senior Centers</p>
+        <div className="flex flex-col items-center gap-6">
+            <h1 className={styles.ebony}>All-time Statistics</h1>
+            <div className={`stat-container ${styles.hidden} flex flex-col gap-10`}>
+                <div className="flex items-center gap-4">
+                    <FaBuildingCircleCheck size={75} className={styles.ebony}/>
+                    <div className="flex-col items-center justify-center">
+                        <p className={styles.ebony}>{partneredCenters}</p>
+                        <p className="font-semibold text-lg text-medium text-slate-700">Partnered Senior Centers</p>
+                    </div>
                 </div>
-            </div>
-            <div className="flex items-center gap-4">
-                <FaPeopleArrows size={50} className={styles.ebony}/>
-                <div className="flex-col items-center justify-center">
-                    <p className={styles.ebony}>{students}</p>
-                    <p className="text-medium text-slate-700">Student Companions</p>
+                <div className="flex items-center gap-4">
+                    <FaPeopleArrows size={75} className={styles.ebony}/>
+                    <div className="flex-col items-center justify-center">
+                        <p className={styles.ebony}>{students}</p>
+                        <p className="font-semibold text-lg text-medium text-slate-700">Student Companions</p>
+                    </div>
                 </div>
-            </div>
-            <div className="flex items-center gap-4">
-                <FaPersonCane size={50} className={styles.ebony}/>
-                <div className="flex-col items-center justify-center">
-                    <p className={styles.ebony}>{adults}</p>
-                    <p className="text-medium text-slate-700">Older Adult Companions</p>
+                <div className="flex items-center gap-4">
+                    <FaPersonCane size={75} className={styles.ebony}/>
+                    <div className="flex-col items-center justify-center">
+                        <p className={styles.ebony}>{adults}</p>
+                        <p className="font-semibold text-lg text-medium text-slate-700">Older Adult Companions</p>
+                    </div>
                 </div>
-            </div>
-            <div className="flex items-center gap-4">
-                <FaHourglassHalf size={50} className={styles.ebony}/>
-                <div className="flex-col items-center justify-center">
-                    <p className={styles.ebony}>{hoursOfService}</p>
-                    <p className="text-medium text-slate-700">Hours of Connecting</p>
+                <div className="flex items-center gap-4">
+                    <FaHourglassHalf size={75} className={styles.ebony}/>
+                    <div className="flex-col items-center justify-center">
+                        <p className={styles.ebony}>{hoursOfService}</p>
+                        <p className="font-semibold text-lg text-medium text-slate-700">Hours Spent Connecting</p>
+                    </div>
                 </div>
             </div>
         </div>

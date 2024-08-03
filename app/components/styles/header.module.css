@@ -17,6 +17,7 @@
     padding: 1.5rem 4rem;
     background-color: var(--umber);
     position: fixed;
+    box-shadow: 0 0px 7px -2px black;
 }
   
 .ul {

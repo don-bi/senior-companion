@@ -1,0 +1,9 @@
+/* for keeping a lot of frequently used styles, import as generic */
+
+.shadow {
+    box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.459);
+}
+
+.backgroundPeach {
+    background-color: var(--peach-light);
+}

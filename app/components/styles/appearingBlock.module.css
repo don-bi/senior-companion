@@ -1,0 +1,11 @@
+.div {
+    opacity: 0;
+    transition: opacity 1s;
+    filter: blur(4px);
+    
+}
+
+.appear {
+    opacity: 1;
+    filter: blur(0);
+}
