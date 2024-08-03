@@ -9,20 +9,20 @@ export default function Header({scroll}: {scroll: boolean}) {
 
     //if scroll is true, the header will change color when the user scrolls
 
-    if (scroll) {
-        useEffect(() => {
+    useEffect(() => {
+        if (scroll) {
             const header = document.querySelector("header");
-            function checkScroll() {
-            if (header && window.scrollY > 0) {
-                header.classList.add(`${styles.scrolled}`);
+            window.addEventListener("scroll", () => {
+                if (header && window.scrollY > 0) {
+                    header.classList.add(`${styles.scrolled}`);
+                }
+                if (header && window.scrollY === 0) {
+                    header.classList.remove(`${styles.scrolled}`);
+                }
             }
-            if (header && window.scrollY === 0) {
-                header.classList.remove(`${styles.scrolled}`);
-            }
-            }
-            window.addEventListener("scroll", checkScroll);
-        }, [])
-    }
+            );
+        }
+    }, [])
 
     const [hamburgerShow, setHamburgerShow] = useState("");
 
