@@ -1,18 +1,33 @@
 .leftScreen {
   position: relative;
   transform: translateX(-75%);
-  transition: 1s;
+}
+
+.leftScreen.show {
+  animation: goRight 1s ease-out forwards;
+}
+
+@keyframes goRight {
+  to {
+    transform: translateX(0);
+    filter: brightness(0.5);
+  }
 }
 
 .rightScreen {
   position: relative;
   transform: translateX(75%);
-  transition: 1s;
 }
 
-.show {
-  transform: translate(0, 0);
-  filter: brightness(0.5);
+.rightScreen.show {
+  animation: goLeft 1s ease-out forwards;
+}
+
+@keyframes goLeft {
+  to {
+    transform: translateX(0);
+    filter: brightness(0.5);
+  }
 }
 
 .h1 {

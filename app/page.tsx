@@ -9,7 +9,7 @@ import senior from "./public/seniors.jpg";
 
 export default function Home() {
   return (
-    <main className="bg-teal-50">
+    <main className="bg-slate-50  ">
         <div className={styles.imageContainer}>
           <Header scroll={true}/>
           <Images />
