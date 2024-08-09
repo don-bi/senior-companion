@@ -23,14 +23,14 @@ export default function Header({scroll}: {scroll: boolean}) {
             }
             );
         }
-    }, [])
+    }, [scroll])
 
     const [hamburgerShow, setHamburgerShow] = useState("");
 
 
     return (
     <div>
-        <header className={`${styles.header} ${scroll ? "" : styles.scrolled}`}>
+        <header className={`${styles.header} ${scroll && styles.scrolled}`}>
             <Link href={"/"}>
                 <div className="text-white">LOGOLOGO</div>
             </Link>
