@@ -1,7 +1,8 @@
 "use client"
 
 import Link from "next/link"
-import styles from "./styles/header.module.css";
+import styles from "./header.module.css";
+import contact from "@/components/contact/contact.module.css";
 import { useEffect, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 
@@ -29,7 +30,7 @@ export default function Header({scroll}: {scroll: boolean}) {
 
     return (
     <div>
-        <header className={`${styles.header} ${scroll ? "" : styles.scrolled}`}>
+        <header className={`${styles.header} ${!scroll && styles.scrolled}`}>
             <Link href={"/"}>
                 <div className="text-white">LOGOLOGO</div>
             </Link>
@@ -38,7 +39,7 @@ export default function Header({scroll}: {scroll: boolean}) {
                     <li><Link href={"/"} className={styles.a}>Home</Link></li>
                     <li><Link href={"/about"} className={styles.a}>About Us</Link></li>
                     <li><Link href={"/branches"} className={styles.a}>Our Branches</Link></li>
-                    <li><Link href={"/join"} className={styles.a}>Contact Us</Link></li>
+                    <li><Link href="#contact" className={styles.a}>Contact Us</Link></li>
                 </ul>
             </nav>
             <nav className={styles.mobile} onClick={()=> {

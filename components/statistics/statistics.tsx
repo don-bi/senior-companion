@@ -2,7 +2,7 @@
 
 import {  useEffect, useState } from "react";
 import { FaBuildingCircleCheck, FaPeopleArrows, FaPersonCane } from "react-icons/fa6";
-import styles from "./styles/statistics.module.css";
+import styles from "./statistics.module.css";
 import { FaHourglassHalf } from "react-icons/fa";
 
 export default function Statistics() {

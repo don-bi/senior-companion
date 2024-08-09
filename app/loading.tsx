@@ -1,6 +1,6 @@
-import Loader from "./components/loader"
-import styles from "./components/styles/loader.module.css"
-import generic from "./components/styles/generic.module.css"
+import Loader from "@/components/loader"
+import styles from "./loading.module.css"
+import generic from "@/components/styles/generic.module.css"
 
 export default function Loading() {
     return (

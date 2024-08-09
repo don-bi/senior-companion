@@ -1,14 +1,15 @@
-import Header from "../components/header";
-import StaffIcon from "../components/staff-icon";
+import Header from "@/components/header/header";
+import StaffIcon from "@/components/staff-icon/staff-icon";
 import styles from "./page.module.css";
-import generic from "../components/styles/generic.module.css";
+import generic from "@/components/styles/generic.module.css";
 import { craig } from "./image-exports";
-import AppearingBlock from "../components/appearing-block";
-import Footer from "../components/footer";
+import AppearingBlock from "@/components/appearingBlock/appearing-block";
+import Footer from "@/components/footer/footer";
+import Contact from "@/components/contact/contact";
 
 export default function About() {
     return (
-        <main className="bg-teal-50">
+        <main className="bg-slate-50">
             <Header scroll={false}/>
             <div className={`${styles.story} px-40 pt-32 pb-24 text-center flex flex-col gap-5 items-center`}>
                 <h1 className="font-bold text-7xl">Our Story</h1>
@@ -39,7 +40,8 @@ export default function About() {
                     </div>
                 </AppearingBlock>
             </div>
-            <Footer />
+            <Contact />
+            <Footer snap={true}/>
         </main>
       );
 }

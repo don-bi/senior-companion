@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect } from "react"
-import styles from "./styles/appearingBlock.module.css"
+import styles from "./appearingBlock.module.css"
 
 export default function AppearingBlock({children, style}: {children: React.ReactNode, style?: string}) {
     useEffect(() => {

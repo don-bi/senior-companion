@@ -1,0 +1,21 @@
+.branches {
+    background-color: var(--peach-light);
+    box-shadow: 1px 1px 7px 4px rgba(180, 180, 180, 0.459);
+}
+
+.downArrow {
+    animation: pointDown 2.5s infinite;
+
+}
+
+@keyframes pointDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

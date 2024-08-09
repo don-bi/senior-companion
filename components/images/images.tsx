@@ -1,10 +1,10 @@
 "use client"
 
 import Image from "next/image";
-import left from '../public/left.png';
-import right from '../public/right.png';
+import left from '@/public/left.png';
+import right from '@/public/right.png';
 import { useEffect } from "react";
-import styles from "./styles/images.module.css"
+import styles from "./images.module.css"
 
 export default function Images() {
     useEffect(() => {

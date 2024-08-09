@@ -7,7 +7,7 @@
     color: var(--khaki);
     position: absolute;
     width: 100%;
-    z-index: 1;
+    z-index: 100;
     box-shadow: 03 -3 10px 0 rgba(0, 0, 0, 0.1);
     transition: 0.2s;
   }

@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from "next/image";
-import generic from './styles/generic.module.css';
+import generic from '../styles/generic.module.css';
 
 export default function StaffIcon({name, imageSrc, imageAlt , title, description}: 
     {name: string, imageSrc: StaticImageData, imageAlt: string, title?: string, description?: string}) {

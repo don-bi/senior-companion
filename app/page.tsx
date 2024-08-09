@@ -1,11 +1,12 @@
 import styles from "./page.module.css";
-import Header from "./components/header";
-import Footer from "./components/footer";
-import Statistics from "./components/statistics";
-import Images from "./components/images";
-import AppearingBlock from "./components/appearing-block";
+import Header from "@/components/header/header";
+import Footer from "@/components/footer/footer";
+import Statistics from "@/components/statistics/statistics";
+import Images from "@/components/images/images";
+import AppearingBlock from "@/components/appearingBlock/appearing-block";
 import Image from "next/image";
-import senior from "./public/seniors.jpg";
+import senior from "@/public/seniors.jpg";
+import Contact from "@/components/contact/contact";
 
 export default function Home() {
   return (
@@ -39,7 +40,8 @@ export default function Home() {
           </div>
 
         </div>
-        <Footer/>
+        <Contact />
+        <Footer snap={true}/>
     </main>
   );
 }
