@@ -13,7 +13,7 @@ export default function Branches() {
                 <div className="pt-32 pb-12 text-center flex flex-col gap-5 items-center w-9/12">
                     <h1 className="font-bold text-5xl">Our Partner Branches</h1>
                     <h2 className="font-semibold text-3xl tracking-wide">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
-                    <p className="font-medium text-xl tracking-wider">Discover the heart of our program by exploring our branches across different communities. Each location represents a unique connection between college students and senior homes, where meaningful relationships are nurtured. We are proud to partner with senior centers across the region to bring joy and companionship to our seniors, and we invite you to see the impact we're making and encourage more to join us in bridging generations and building lasting connections.</p>
+                    <p className="font-medium text-xl tracking-wider">Discover the heart of our program by exploring our branches across different communities. Each location represents a unique connection between college students and senior homes, where meaningful relationships are nurtured. We are proud to partner with senior centers across the region to bring joy and companionship to our seniors, and we invite you to see the impact we&apos;re making and encourage more to join us in bridging generations and building lasting connections.</p>
                 </div>
             </div>
             <div className="flex flex-col items-center justify-center py-10">
