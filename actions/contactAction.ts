@@ -8,7 +8,9 @@ export const contactAction = async (data: any) => {
             await transporter.sendMail({
                 ...mailOptions,
                 subject: data.subject,
-                text: `From: ${data.email}\n\n${data.message}`
+                text: `From: ${data.firstName} ${data.lastName}
+                Email: \n${data.email}
+                \n\n${data.message}`
             })
             return { success: true, message: 'Form was successful', data };
         } catch (error) {
