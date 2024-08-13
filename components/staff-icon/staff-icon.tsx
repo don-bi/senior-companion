@@ -1,11 +1,12 @@
 import Image, { StaticImageData } from "next/image";
 import generic from '../styles/generic.module.css';
+import styles from './staffIcon.module.css';
 
 export default function StaffIcon({name, imageSrc, imageAlt , title, description}: 
     {name: string, imageSrc: StaticImageData, imageAlt: string, title?: string, description?: string}) {
         return (
             <div className="flex flex-col items-center gap-3">
-                <div className={`${generic.shadow} w-80 rounded-full`}>
+                <div className={`${styles.imageWrapper} ${generic.shadow} w-80 rounded-full`}>
                     <Image src={imageSrc} alt={imageAlt} style={{borderRadius: "100%"}}/>
                 </div>
                 <h2 className="font-bold text-2xl">{name}</h2>

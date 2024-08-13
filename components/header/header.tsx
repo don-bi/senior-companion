@@ -49,13 +49,14 @@ export default function Header({scroll}: {scroll: boolean}) {
                     setHamburgerShow("");
                 }
             }}>
-                <GiHamburgerMenu size={30} fill="white"/>
+                <GiHamburgerMenu size={30} fill="white" className="cursor-pointer"/>
             </nav>
         </header>
         <ul className={`${styles.mobileul} ${hamburgerShow}`}>
-            <li className={styles.li}><Link href={"/join"} className={styles.a}>Join Us</Link></li>
+            <li className={styles.li}><Link href={"/"} className={styles.a}>Home</Link></li>
             <li className={styles.li}><Link href={"/about"} className={styles.a}>About Us</Link></li>
-            <li className={styles.li}><Link href={"/join"} className={styles.a}>Join Us</Link></li>
+            <li className={styles.li}><Link href={"/branches"} className={styles.a}>Our Branches</Link></li>
+            <li className={styles.li}><a href="#contact" className={styles.a}>Contact Us</a></li>
         </ul>
     </div>
     )

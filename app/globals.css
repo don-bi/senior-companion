@@ -26,6 +26,7 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-snap-type: y proximity;
+  max-width: 100%;
 }
 
 @layer utilities {

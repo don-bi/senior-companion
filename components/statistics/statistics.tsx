@@ -64,32 +64,32 @@ export default function Statistics() {
     }, [increasing, partneredCenters, students, adults, hoursOfService])
 
     return (
-        <div className="flex flex-col items-center gap-6">
+        <div className="flex flex-col items-center gap-4 lg:gap-6">
             <h1 className={styles.ebony}>All-time Statistics</h1>
             <div className={`stat-container ${styles.hidden} flex flex-col gap-10`}>
                 <div className="flex items-center gap-4">
-                    <FaBuildingCircleCheck size={75} className={styles.ebony}/>
+                    <FaBuildingCircleCheck className={`${styles.ebony} ${styles.icons}`}/>
                     <div className="flex-col items-center justify-center">
                         <p className={styles.ebony}>{partneredCenters}</p>
                         <p className="font-semibold text-lg text-medium text-slate-700">Partnered Senior Centers</p>
                     </div>
                 </div>
                 <div className="flex items-center gap-4">
-                    <FaPeopleArrows size={75} className={styles.ebony}/>
+                    <FaPeopleArrows className={`${styles.ebony} ${styles.icons}`}/>
                     <div className="flex-col items-center justify-center">
                         <p className={styles.ebony}>{students}</p>
                         <p className="font-semibold text-lg text-medium text-slate-700">Student Companions</p>
                     </div>
                 </div>
                 <div className="flex items-center gap-4">
-                    <FaPersonCane size={75} className={styles.ebony}/>
+                    <FaPersonCane className={`${styles.ebony} ${styles.icons}`}/>
                     <div className="flex-col items-center justify-center">
                         <p className={styles.ebony}>{adults}</p>
                         <p className="font-semibold text-lg text-medium text-slate-700">Older Adult Companions</p>
                     </div>
                 </div>
                 <div className="flex items-center gap-4">
-                    <FaHourglassHalf size={75} className={styles.ebony}/>
+                    <FaHourglassHalf className={`${styles.ebony} ${styles.icons}`}/>
                     <div className="flex-col items-center justify-center">
                         <p className={styles.ebony}>{hoursOfService}</p>
                         <p className="font-semibold text-lg text-medium text-slate-700">Hours Spent Connecting</p>

@@ -85,7 +85,7 @@ export default function Carousel() {
     
     return (
         <div className={`flex pt-8 pb-8 ${styles.carouselWrapper}`}>
-            <div className={`flex relative w-7/12 aspect-video ${generic.shadow} overflow-hidden z-10`}>
+            <div className={`${styles.imageWrapper} flex relative w-7/12 aspect-video ${generic.shadow} overflow-hidden z-10`}>
                 {imgs.map((img, index) => {
                     return (
                         <Image key={index} src={img} alt="seniors" style={{objectFit: "cover", translate: `-${slide * 100}%`}} className="duration-300"/>
@@ -112,7 +112,7 @@ export default function Carousel() {
                     })}
                 </div>
             </div>
-            <div className="relative flex w-5/12" ref={wrapperRef}>
+            <div className={`${styles.textWrapper} relative flex w-5/12`} ref={wrapperRef}>
                 {branchInfo.map((branch, index) => {
                     return (
                         <CarouselText 

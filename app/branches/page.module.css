@@ -1,6 +1,7 @@
 .branches {
     background-color: var(--peach-light);
     box-shadow: 1px 1px 7px 4px rgba(180, 180, 180, 0.459);
+    scroll-snap-align: start;
 }
 
 .downArrow {
@@ -17,5 +18,11 @@
     }
     100% {
         transform: translateY(0);
+    }
+}
+
+@media (max-width: 1000px) {
+    .branches {
+        scroll-snap-align: unset;
     }
 }

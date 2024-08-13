@@ -2,19 +2,27 @@
 
 import { mailOptions, transporter } from "@/config/nodemailer";
 
-export const contactAction = async (data: any) => {
-    if (data.email && data.message) {
+type FormData = {
+    firstName: string;
+    lastName: string;
+    email: string;
+    subject: string;
+    message: string;
+}
+
+export const contactAction = async (formData: FormData) => {
+    if (formData && formData.email && formData.message) {
         try {
             await transporter.sendMail({
                 ...mailOptions,
-                subject: data.subject,
-                text: `From: ${data.firstName} ${data.lastName}\nEmail: ${data.email}\n\n${data.message}`
+                subject: formData.subject,
+                text: `From: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}\n\n${formData.message}`
             })
-            return { success: true, message: 'Form was successful', data };
+            return { success: true, message: 'Form was successful', formData };
         } catch (error) {
             console.log(error);
-            return { success: false, message: 'Form was not successful', data };
+            return { success: false, message: 'Form was not successful', formData };
         }
     }
-    return { success: false, message: 'Form was not successful', data };
+    return { success: false, message: 'Form was not successful', formData };
 }

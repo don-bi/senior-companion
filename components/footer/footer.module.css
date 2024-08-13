@@ -1,7 +1,7 @@
 .footer {
     display: flex;
     align-items: center;
-    padding: 1.5rem 4rem;
+    padding: 1.5rem 8%;
     background-color: var(--umber);
     color: var(--peach);
     position: absolute;

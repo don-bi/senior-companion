@@ -100,9 +100,9 @@ export default function Contact() {
                 </div>
             </form>
             <div className='flex justify-between'>
-                <div className='font-semibold'>Wish to contact us alternatively?</div>
-                <div className='font-semibold'>Phone: 917-678-7599</div>
-                <div className='font-semibold'>Email: craigchen1219@gmail.com</div>
+                <div className='text-xs lg:text-base font-semibold flex-auto'>Wish to contact us alternatively?</div>
+                <div className='text-xs lg:text-base font-semibold break-all flex-auto'>Phone: 917-678-7599</div>
+                <div className='text-xs lg:text-base font-semibold break-all flex-auto'>Email: craigchen1219@gmail.com</div>
             </div>
         </div>
     )

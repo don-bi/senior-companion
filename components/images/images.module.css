@@ -1,5 +1,12 @@
-.leftScreen {
+.wrapper {
   position: relative;
+  height: 100svh;
+  background-color: var(--peach-light);
+  box-shadow: 1px 1px 7px 4px rgba(180, 180, 180, 0.459);
+  overflow: hidden;
+}
+
+.leftScreen {
   transform: translateX(-75%);
 }
 
@@ -15,7 +22,6 @@
 }
 
 .rightScreen {
-  position: relative;
   transform: translateX(75%);
 }
 
@@ -47,6 +53,7 @@
   font-size: 3rem;
   font-weight: 700;
   letter-spacing: 0.1rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .span, .spanTwo {
@@ -85,5 +92,125 @@
   to{
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+
+/* media queries for height */
+@media (height < 642px) {
+  .h1, .h2 {
+    font-size: 2.5rem;
+  }
+  .h1 {
+    bottom: 90svh;
+  }
+
+  .h2 {
+    top: 90svh;
+  }
+}
+
+@media (height < 568px) {
+  .h1, .h2 {
+    font-size: 2rem;
+  }
+
+  .h1 {
+    bottom: 93svh;
+  }
+
+  .h2 {
+    top: 93svh;
+  }
+}
+
+@media (height < 509px) {
+  .h1, .h2 {
+    font-size: 1.5rem;
+    color: var(--peach);
+    z-index: 1;
+  }
+  .span, .spanTwo {
+    opacity: 0;
+    color: var(--peach);
+  }
+}
+
+/* media queries for width */
+@media (width < 1250px) {
+  .h1, .h2 {
+    font-size: 2.5rem;
+  }
+
+  .h1  {
+    top: 10%;
+  }
+}
+
+@media (width < 986.4px) {
+  .h1, .h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (width < 904px) {
+  .wrapper {
+    height: 80vh;
+  }
+
+  .h1, .h2 {
+    font-size: 2rem;
+  }
+  .h2 {
+    top: 36rem;
+  }
+}
+
+@media (width < 760px) {
+  .wrapper {
+    height: 70vh;
+  }
+
+  .h1, .h2 {
+    font-size: 1.5rem;
+  }
+
+  .h2 {
+    top: 32rem;
+  }
+}
+
+@media (width < 523px) {
+  .wrapper {
+    height: 50vh;
+  }
+
+  .h1, .h2 {
+    font-size: 1.2rem;
+  }
+
+  .h2 {
+    top: 23rem;
+  }
+}
+
+@media (width < 400px) {
+  .wrapper {
+    height: 30svh;
+  }
+
+  .h1, .h2 {
+    font-size: 1rem;
+    width: max-content;
+  }
+
+  .h1 {
+    left: 1.5rem;
+    top: 1rem;
+  }
+
+  .h2 {
+    top: 13.5rem;
+    right: 1.5rem;
   }
 }

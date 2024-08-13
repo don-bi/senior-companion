@@ -1,0 +1,13 @@
+@media (width < 721px) {
+
+.imageWrapper {
+    width: 16rem;
+}
+}
+
+@media (width < 593px) {
+
+    .imageWrapper {
+        width: 13rem;
+    }
+    }

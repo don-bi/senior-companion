@@ -11,16 +11,14 @@ import Contact from "@/components/contact/contact";
 export default function Home() {
   return (
     <main className="bg-slate-50  ">
-        <div className={styles.imageContainer}>
-          <Header scroll={true}/>
-          <Images />
-        </div>
+        <Header scroll={true}/>
+        <Images />
 
-        <div className="flex-col items-center px-5 py-5 md:px-40 md:py-10 overflow-visible">
+        <div className="flex-col items-center px-5 py-5 md:py-10 overflow-visible">
 
           {/* mission statement section */}
-          <AppearingBlock>
-            <div className="mission-statement flex flex-col justify-center text-center gap-5 border-b-2 border-yellow-950 pb-8">
+          <AppearingBlock style="flex justify-center">
+            <div className="mission-statement flex flex-col justify-center text-center gap-5 border-b-2 border-yellow-950 pb-8 w-3/4">
                 <h1 className="text-4xl font-semibold overflow-hidden">Mission Statement</h1>
                 <p className="text-xl">
                   Our students foster meaningful connections with their older adult companions,
@@ -33,7 +31,7 @@ export default function Home() {
 
           {/* statistics section */}
           <div className={`${styles.statSection} flex mt-10 gap-12 items-center`}>
-            <div className={`${styles.shadow} w-8/12`}>
+            <div className={`${styles.shadow} w-11/12 md:w-8/12`}>
               <Image src={senior} alt="senior picture" />
             </div>
             <Statistics />

@@ -24,3 +24,21 @@
     font-size: 2rem;
     text-shadow: #593D3B 1px 1px 1px;
 }
+
+.icons {
+    font-size: 5rem;
+}
+
+@media (width < 840px) {
+    .ebony {
+        font-size: 1.5rem;
+    }
+
+    .icons {
+        font-size: 3rem;
+    }
+}
+
+@media (width < 720px) {
+    
+}

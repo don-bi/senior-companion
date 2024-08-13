@@ -7,6 +7,7 @@
 
 .text {
     opacity: 0;
+    overflow: scroll;
 }
 
 .show {
@@ -46,4 +47,47 @@
     color: black;
     background-color: var(--peach-dark);
     transition-duration: 0.2s;
+}
+
+@media (width < 1000px) {
+    .carouselWrapper {
+        scroll-snap-align: unset;
+        height: 30rem;
+    }
+}
+
+@media (width < 850px) {
+    .carouselWrapper {
+        flex-direction: column;
+        align-items: center;
+        height: 41rem;
+    }
+
+    .imageWrapper {
+        width: 90%;
+    }
+
+    .textWrapper {
+        margin-top: 1rem;
+        flex: auto;
+        width: 100%;
+    }
+}
+
+@media (width < 750px) {
+    .carouselWrapper {
+        height: 37rem;
+    }
+}
+
+@media (width < 600px) {
+    .carouselWrapper {
+        height: 32rem;
+    }
+}
+
+@media (width < 480px) {
+    .carouselWrapper {
+        height: 28rem;
+    }
 }
