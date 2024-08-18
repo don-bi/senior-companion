@@ -9,7 +9,7 @@ import z from "zod";
 import FormSuccess from "./form-success";
 import FormError from "./form-error";
 
-export default function RegisterForm() {
+export default function LoginForm() {
     const [success, setSuccess] = useState<string | undefined>("");
     const [error, setError] = useState<string | undefined>("");
     const [isPending, startTransition] = useTransition();

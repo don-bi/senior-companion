@@ -1,11 +1,11 @@
 "use server"
 
 import z from "zod";
-import bcrypt from "bcryptjs";
+import { AuthError } from "next-auth";
 
-import { getUserByEmail } from "@/data/user";
 import { loginSchema } from "@/schemas";
-import { db } from "@/lib/db";
+import { signIn } from "@/auth";
+import { DEFAULT_LOGIN_REDIRECT } from "@/routes";
 
 export const loginAction = async (formData: z.infer<typeof loginSchema>) => {
     const validatedData = loginSchema.safeParse(formData);
@@ -16,9 +16,25 @@ export const loginAction = async (formData: z.infer<typeof loginSchema>) => {
 
     const { email, password } = validatedData.data;
 
-    const user = await getUserByEmail(email);
-    
-    //TODO
+    try {
+        await signIn('credentials', {
+            email,
+            password,
+            redirectTo: DEFAULT_LOGIN_REDIRECT,
+        })
+    } catch (error) {
+        if (error instanceof AuthError) {
+            switch (error.type) {
+                case "CredentialsSignin": {
+                    return { error: 'Invalid credentials', formData };
+                }
+                default: {
+                    return { error: 'An error occurred', formData };
+                }
+            }
+        }
+        throw error;
+    }
 
     return { success: 'User created successfully' };
 }

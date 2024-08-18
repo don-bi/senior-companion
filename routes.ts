@@ -4,7 +4,8 @@
  */
 export const publicRoutes = [
     "/",
-
+    "/about",
+    "/branches",
 ]
 
 /**
