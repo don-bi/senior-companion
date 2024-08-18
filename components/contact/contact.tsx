@@ -9,16 +9,9 @@ import { contactAction } from '@/actions/contactAction';
 import styles from './contact.module.css';
 import { useEffect, useRef, useState } from 'react';
 import { error } from 'console';
+import { contactSchema } from '@/schemas';
 
-const schema = z.object({
-    firstName: z.string().max(50),
-    lastName: z.string().max(50),
-    email: z.string().email("Valid email is required."),
-    subject: z.string().max(100),
-    message: z.string().min(1, "Message is required.").max(500, "Message too long"),
-})
-
-type contactFields = z.infer<typeof schema>
+type contactFields = z.infer<typeof contactSchema>
 
 export default function Contact() {
     const successElement = useRef<HTMLDivElement>(null);
@@ -33,7 +26,7 @@ export default function Contact() {
             subject: "",
             message: ""
         },
-        resolver: zodResolver(schema),
+        resolver: zodResolver(contactSchema),
     });
 
     const onSubmit: SubmitHandler<contactFields> = async (data) => {

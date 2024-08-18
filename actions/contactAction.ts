@@ -1,28 +1,27 @@
 "use server"
 
 import { mailOptions, transporter } from "@/config/nodemailer";
+import { contactSchema } from "@/schemas";
+import { z } from "zod";
 
-type FormData = {
-    firstName: string;
-    lastName: string;
-    email: string;
-    subject: string;
-    message: string;
-}
-
-export const contactAction = async (formData: FormData) => {
-    if (formData && formData.email && formData.message) {
+export const contactAction = async (formData: z.infer<typeof contactSchema>) => {
+    const validatedData = contactSchema.safeParse(formData);
+    if (!validatedData.success) {
+        return { success: false, message: 'Form was not successful', formData };
+    }
+    const { firstName, lastName, email, subject, message} = validatedData.data;
+    if (email && message) {
         try {
             await transporter.sendMail({
                 ...mailOptions,
-                subject: formData.subject,
-                text: `From: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}\n\n${formData.message}`
+                subject: subject,
+                text: `From: ${firstName} ${lastName}\nEmail: ${email}\n\n${message}`
             })
-            return { success: true, message: 'Form was successful', formData };
+            return { success: true, message: 'Form was successful' };
         } catch (error) {
             console.log(error);
-            return { success: false, message: 'Form was not successful', formData };
+            return { success: false, message: 'Form was not successful' };
         }
     }
-    return { success: false, message: 'Form was not successful', formData };
+    return { success: false, message: 'Form was not successful' };
 }
