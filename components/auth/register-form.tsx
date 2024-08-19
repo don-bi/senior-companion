@@ -8,6 +8,7 @@ import { useForm } from 'react-hook-form';
 import z from "zod";
 import FormSuccess from "./form-success";
 import FormError from "./form-error";
+import OAuth from "./oauth";
 
 export default function RegisterForm() {
     const [success, setSuccess] = useState<string | undefined>("");
@@ -56,6 +57,8 @@ export default function RegisterForm() {
             <FormError message={error}/>
 
             <button type="submit">Create an account</button>
+
+            <OAuth />
         </form>
     )
 }
