@@ -1,4 +1,5 @@
-import {auth, signOut} from "@/auth"
+import {auth} from "@/auth"
+import LogoutButton from "@/components/auth/logout-button"
 
 export default async function Dashboard() {
     const session = await auth()
@@ -6,13 +7,7 @@ export default async function Dashboard() {
     return (
         <div>
             {JSON.stringify(session)}
-            <form action={async () => {
-                "use server"
-
-                await signOut();
-            }}>
-                <button type="submit">Log out</button>
-            </form>
+            <LogoutButton />
         </div>
     )
 }
