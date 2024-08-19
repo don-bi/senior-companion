@@ -50,7 +50,7 @@ export default function LoginForm() {
             <FormSuccess message={success}/>
             <FormError message={error}/>
 
-            <button type="submit">Create an account</button>
+            <button type="submit">Log in</button>
         </form>
     )
 }
