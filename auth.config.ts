@@ -1,4 +1,3 @@
-"use server"
 import Google from "next-auth/providers/google";
 import { NextAuthConfig } from "next-auth";
 import Credentials from "next-auth/providers/credentials";
