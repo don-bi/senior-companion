@@ -21,13 +21,14 @@
   --umber: hsla(24, 14%, 38%, 1);
   --beaver-2: hsla(30, 14%, 47%, 1);
   --rose-ebony: hsla(4, 20%, 29%, 1);
-  --olive: hsl(120, 25%, 77%);
+  --olive: #b6d3b6;
   --olive-mid: #d3ecd3ff;
   --olive-light: hsl(120, 25%, 89%);
   --olive-dark: hsl(102, 61%, 29%);
   --olive-dark-darker: hsl(102, 61%, 14%);
   --light-green: hsl(120, 40%, 88%);
   --pine-green: #3b5943;
+  --green-white: #e9f2ef;
 }
 
 html {

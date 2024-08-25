@@ -40,7 +40,7 @@ export default function Header({scroll}: {scroll: boolean}) {
                 <ul className={styles.ul}>
                     <li><Link href={"/"} className={styles.a}>Home</Link></li>
                     <li><Link href={"/about"} className={styles.a}>About Us</Link></li>
-                    <li><Link href={"/branches"} className={styles.a}>Our Branches</Link></li>
+                    <li><Link href={"/partners"} className={styles.a}>Our Partners</Link></li>
                     <li><a href="#contact" className={styles.a}>Contact Us</a></li>
                 </ul>
             </nav>
