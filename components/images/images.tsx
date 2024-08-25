@@ -28,7 +28,7 @@ export default function Images() {
         <React.Fragment>
             <div className={styles.wrapper}>
                 <h1 className={styles.h1}><span className={styles.span}>Meet</span> <span className={styles.span}>Your</span> <span className={styles.span}>Very</span> <span className={styles.span}>Own</span></h1>
-                <h1 className={styles.h2}><span className={styles.spanTwo}>Student</span> <span className={styles.spanTwo}>Companion</span></h1>
+                <h1 className={styles.h2}><span className={styles.spanTwo}>Student</span> <span className={styles.spanTwo}>Companion!</span></h1>
                 
                 <Image src={left} alt={"senior looking at computer"} layout="fill" objectFit="cover" className={styles.leftScreen} />
                 <Image src={right} alt={"senior looking at computer"} layout="fill" objectFit="cover" className={styles.rightScreen} />

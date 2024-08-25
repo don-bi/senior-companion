@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
 
 @media (prefers-color-scheme: dark) {
@@ -20,12 +21,18 @@
   --umber: hsla(24, 14%, 38%, 1);
   --beaver-2: hsla(30, 14%, 47%, 1);
   --rose-ebony: hsla(4, 20%, 29%, 1);
+  --olive: hsl(120, 25%, 77%);
+  --olive-mid: #d3ecd3ff;
+  --olive-light: hsl(120, 25%, 89%);
+  --olive-dark: hsl(102, 61%, 29%);
+  --olive-dark-darker: hsl(102, 61%, 14%);
+  --light-green: hsl(120, 40%, 88%);
+  --pine-green: #3b5943;
 }
 
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
-  scroll-snap-type: y proximity;
   max-width: 100%;
 }
 
@@ -37,6 +44,6 @@ html {
 
 * {
   /* overflow-x: hidden; */
-  color: #334155;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  color: #1f3527;
+  font-family: "Libre Baskerville", serif;
 }

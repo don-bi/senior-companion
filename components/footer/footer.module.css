@@ -2,8 +2,8 @@
     display: flex;
     align-items: center;
     padding: 1.5rem 8%;
-    background-color: var(--umber);
-    color: var(--peach);
+    background-color: var(--olive);
+    color: var(--olive-dark-darker);
     position: absolute;
     width: 100%;
     z-index: 100;
@@ -12,15 +12,15 @@
   }
 
 .mediaColors {
-    color: var(--peach);
-    fill: var(--peach);
+    color: var(--pine-green);
+    fill: var(--pine-green);
     text-decoration: none;
     transition-duration: 0.2s;
 }
 
 .mediaColorsHover {
-    color:var(--peach-light);
-    fill: var(--peach-light);
+    color: #3b5943;
+    fill: #448354;
     transition-duration: 0.2s;
 }
 
@@ -28,5 +28,5 @@
     font-size: 1.2rem;
     font-weight: 600;
     margin-left: auto;
-    color: var(--peach);
+    color: var(--pine-green);
 }

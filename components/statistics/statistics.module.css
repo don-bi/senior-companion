@@ -17,12 +17,12 @@
     }
 }
 
-.ebony {
-    color: #593D3B;
-    fill: #593D3B;
+.color {
+    color: #3b5943;
+    fill: #3b5943;
     font-weight: 700;
     font-size: 2rem;
-    text-shadow: #593D3B 1px 1px 1px;
+    text-shadow: #3b5943 1px 1px 1px;
 }
 
 .icons {

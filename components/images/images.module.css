@@ -1,7 +1,7 @@
 .wrapper {
   position: relative;
   height: 100svh;
-  background-color: var(--peach-light);
+  background-color: #e9f2ef;
   box-shadow: 1px 1px 7px 4px rgba(180, 180, 180, 0.459);
   overflow: hidden;
 }
@@ -58,7 +58,7 @@
 
 .span, .spanTwo {
   opacity: 0;
-  color: var(--rose-ebony);
+  color: #0f4936;
 }
 
 .fadeIn.span, .fadeIn.spanTwo{

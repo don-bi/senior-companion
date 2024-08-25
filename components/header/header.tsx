@@ -5,6 +5,8 @@ import styles from "./header.module.css";
 import contact from "@/components/contact/contact.module.css";
 import { useEffect, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
+import logo from "@/public/studentcompanionlogo.png";
+import Image from "next/image";
 
 export default function Header({scroll}: {scroll: boolean}) {
 
@@ -31,8 +33,8 @@ export default function Header({scroll}: {scroll: boolean}) {
     return (
     <div>
         <header className={`${styles.header} ${scroll ? "" : styles.scrolled}`}>
-            <Link href={"/"}>
-                <div className="text-white">LOGOLOGO</div>
+            <Link href={"/"} className="h-[76.8px]">
+                <Image src={logo} alt={"logo"} style={{height: "76.8px", width: "auto"}}/>
             </Link>
             <nav className={styles.nav}>
                 <ul className={styles.ul}>

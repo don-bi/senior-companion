@@ -4,9 +4,9 @@ import { FaInstagram, FaLinkedin, FaFacebookSquare } from "react-icons/fa";
 import styles from "./footer.module.css"
 import MediaLink from "./media-link";
 
-export default function Footer({snap}: {snap?: boolean}) {
+export default function Footer() {
     return (
-        <footer className={`${styles.footer} flex gap-2 ${snap && "lg:snap-end"}`}>
+        <footer className={`${styles.footer} flex gap-2`}>
             <div className="flex gap-2 w-3/6">
                 <MediaLink
                 href="https://www.instagram.com/perennialprep"
