@@ -58,7 +58,7 @@ export default function Contact() {
             <div className={`${styles.textEbony} ${styles.error}`} ref={errorElement}>Message not sent. Please try again.</div>
             <form onSubmit={handleSubmit(onSubmit)} method='POST' className='flex flex-col gap-2 mt-6'>
                 <div className='flex gap-4'>
-                <div className='flex flex-col flex-auto'>
+                    <div className='flex flex-col flex-auto'>
                         <label htmlFor="firstName" className={styles.textEbony}>First Name</label>
                         <input id="firstName" type="text" {...register('firstName')} className={styles.input}/>
                         <div>&nbsp;</div>

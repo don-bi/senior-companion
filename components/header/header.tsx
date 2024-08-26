@@ -41,6 +41,7 @@ export default function Header({scroll}: {scroll: boolean}) {
                     <li><Link href={"/"} className={styles.a}>Home</Link></li>
                     <li><Link href={"/about"} className={styles.a}>About Us</Link></li>
                     <li><Link href={"/partners"} className={styles.a}>Our Partners</Link></li>
+                    <li><Link href={"/volunteer"} className={styles.a}>Get Involved</Link></li>
                     <li><a href="#contact" className={styles.a}>Contact Us</a></li>
                 </ul>
             </nav>
