@@ -1,0 +1,20 @@
+.learnButton {
+    background-color: var(--olive-light);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.learnButton:hover {
+    background-color: var(--olive-mid);
+    color: var(--olive-dark);
+    
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 7rem;
+    min-height: 12rem;
+}
