@@ -43,11 +43,11 @@ export default function About() {
                         </p>
                     </AppearingBlock>
                     <AppearingBlock style="flex justify-center">
-                        <p className="text-md tracking-wide leading-6">Oftentimes, we ask older adults for a piece of advice they'd give to their younger self. But that piece of advice is rarely enough for ourselves to understand their perspective. Understanding takes sitting down and listening to their stories. Nafisa and Craig wanted to share that understanding and on one day in 2022, their plan to do so was born.
+                        <p className="text-md tracking-wide leading-6">Oftentimes, we ask older adults for a piece of advice they&apos;d give to their younger self. But that piece of advice is rarely enough for ourselves to understand their perspective. Understanding takes sitting down and listening to their stories. Nafisa and Craig wanted to share that understanding and on one day in 2022, their plan to do so was born.
                         </p>
                     </AppearingBlock>
                     <AppearingBlock style="flex justify-center">
-                        <p className="text-md tracking-wide leading-6">In July 2024, we, Nafisa and Craig, have finally brought our plans to reality and it couldn't have been possible without much luck, support, and the care that we all possess. Everywhere we've turned we have found help and interest. Everywhere we turn, we're met with companionship — from the people we connect with, to the stories they share, and the bridges we continue to build.
+                        <p className="text-md tracking-wide leading-6">In July 2024, we, Nafisa and Craig, have finally brought our plans to reality and it couldn&apos;t have been possible without much luck, support, and the care that we all possess. Everywhere we&apos;ve turned we have found help and interest. Everywhere we turn, we&apos;re met with companionship — from the people we connect with, to the stories they share, and the bridges we continue to build.
                         </p>
                     </AppearingBlock>
                     <AppearingBlock style="flex justify-center">
