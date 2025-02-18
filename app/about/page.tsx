@@ -2,7 +2,7 @@ import Header from "@/components/header/header";
 import StaffIcon from "@/components/staff-icon/staff-icon";
 import styles from "./page.module.css";
 import generic from "@/components/styles/generic.module.css";
-import { craig, nafisa } from "./image-exports";
+import { craig, nafisa, donald } from "./image-exports";
 import AppearingBlock from "@/components/appearingBlock/appearing-block";
 import Footer from "@/components/footer/footer";
 import Contact from "@/components/contact/contact";
@@ -11,50 +11,52 @@ export default function About() {
     return (
         <main className="bg-slate-50">
             <Header scroll={false}/>
-            <div className={`${styles.story} w-full pt-32 pb-24 text-center flex flex-col gap-5 items-center px-[10.5%]`}>
-                <h1 className="w-8/12 font-bold text-5xl sm:text-7xl">Our Story</h1>
-                <AppearingBlock style="flex justify-center">
-                    <p className="text-2xl tracking-wide leading-10">Within us all, within the warm depths of all our kind hearts, lies a tender spot reserved for the older adults of the world. Our very instinct is to look on them with gentle eyes and hear their stories readily with open ears.
-                    </p>
-                </AppearingBlock>
-                <AppearingBlock style="flex justify-center">
-                    <p className="text-2xl tracking-wide leading-10">We, Craig and Nafisa, in founding Student Companions, felt urged into action by our compassion and admiration for older adults. Back in highschool, we were introduced by our honor society into a similar older adult telephone reassurance program. The calls sent from our phones to paired seniors blossomed into flourishing conversations and lasting relationships. Hours passed sitting by the window, with a senior on call, watching the sun set. Hours, days, weeks, months, years of conversations brought out stories of joy, grief, pain, celebration, and regret.
-                    </p>
-                </AppearingBlock>
-                <AppearingBlock style="flex justify-center">
-                    <p className="text-2xl tracking-wide leading-10">When highschool ended, so did our time with those seniors. Moving on from those connections and caring moments was hard; we felt incomplete without those friends on the phone, their ever-rewarding insights. So we found the perfect resolution, brought the older adult telephone companion program to college and created Student Companions.
-                    </p>
-                </AppearingBlock>
-                <AppearingBlock style="flex justify-center">
-                    <p className="text-2xl tracking-wide leading-10">We’re excited to spent hours on call while strolling through parks and lying on the couch, our minds open to stories from another world and time. And this time around, we’d like to share it with others!
-                    </p>
-                </AppearingBlock>
-                <AppearingBlock style="flex justify-center">
-                    <p className="text-2xl tracking-wide leading-10">By reaching out to senior centers and student volunteering organizations, we aspire to source populations of interested older adult participants and student volunteers. Such experiences were invaluable in our own lives and it is an honor for us to promote it to others.
-                    </p>
-                </AppearingBlock>
-            </div>
-            <div className="bg-[#d3ecd3ff]">
-                <AppearingBlock>
-                    <div className="py-10 flex flex-col items-center">
-                        <h1 className="text-3xl md:text-4xl lg:text-6xl font-semibold w-full text-center">Our Founders</h1>
-                        <div className="flex items-center justify-center gap-20 mt-4 flex-wrap">
-                            <StaffIcon imageSrc={craig} imageAlt="Picture of Co-founder Craig Chen" name="Craig Chen" title=""/>
-                            <StaffIcon imageSrc={nafisa} imageAlt="Picture of Co-founder Nafisa Hoque" name="Nafisa Hoque" title=""/>
-                        </div>
+            <div className="flex flex-col md:flex-row">
+                <div className="md:w-1/2">
+                    <div className="bg-[#d3ecd3ff]">
+                        <AppearingBlock>
+                            <div className="pt-32 py-10 flex flex-col items-center">
+                                <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold w-full text-center">Our Founders</h1>
+                                <div className="flex items-center justify-center gap-20 mt-4 flex-wrap">
+                                    <StaffIcon imageSrc={craig} imageAlt="Picture of Co-founder Craig Chen" name="Craig Chen" title=""/>
+                                    <StaffIcon imageSrc={nafisa} imageAlt="Picture of Co-founder Nafisa Hoque" name="Nafisa Hoque" title=""/>
+                                </div>
+                            </div>
+                        </AppearingBlock>
                     </div>
-                </AppearingBlock>
-            </div>
-            <div className={`bg-[#e9f2eb]`}>
-                <AppearingBlock>
-                    <div className={`py-10 flex flex-col items-center`}>
-                    <h1 className="text-3xl md:text-4xl lg:text-6xl font-semibold w-full text-center">Webmaster</h1>
-                        <div className="flex items-center justify-center gap-20 mt-4 flex-wrap">
-                            <StaffIcon imageSrc={craig} imageAlt="Picture of WebDesigner" name="Donald Bi" title=""/>
-                        </div>
+                    <div className={`bg-[#deefe2]`}>
+                        <AppearingBlock>
+                            <div className={`py-10 flex flex-col items-center`}>
+                            <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold w-full text-center">Our Web Designer</h1>
+                                <div className="flex items-center justify-center gap-20 mt-4 flex-wrap">
+                                    <StaffIcon imageSrc={donald} imageAlt="Picture of WebDesigner" name="Donald Bi" title=""/>
+                                </div>
+                            </div>
+                        </AppearingBlock>
                     </div>
-                </AppearingBlock>
+                </div>
+                
+                <div className={`${styles.story} md:w-1/2 pt-32 pb-24 text-center flex flex-col gap-5 items-center px-[4.5%]`}>
+                    <h1 className="w-8/12 font-bold text-3xl sm:text-5xl">Our Story</h1>
+                    <AppearingBlock style="flex justify-center">
+                        <p className="text-md tracking-wide leading-6">Student Companions sprung up not so long ago, in July 2024, but the seeds were planted years before. In 2022, Craig and Nafisa were high school friends who volunteered as student telephone companions for seniors. During the hours they spent on the phone each week with the seniors, they were brought out of their daily lives and their daily routine. In those conversations they saw through different perspectives. With seniors on the other end of the call, the phone took them through portals. Their calls were rich with the unspoken significance of building intergenerational bridges.
+                        </p>
+                    </AppearingBlock>
+                    <AppearingBlock style="flex justify-center">
+                        <p className="text-md tracking-wide leading-6">Oftentimes, we ask older adults for a piece of advice they'd give to their younger self. But that piece of advice is rarely enough for ourselves to understand their perspective. Understanding takes sitting down and listening to their stories. Nafisa and Craig wanted to share that understanding and on one day in 2022, their plan to do so was born.
+                        </p>
+                    </AppearingBlock>
+                    <AppearingBlock style="flex justify-center">
+                        <p className="text-md tracking-wide leading-6">In July 2024, we, Nafisa and Craig, have finally brought our plans to reality and it couldn't have been possible without much luck, support, and the care that we all possess. Everywhere we've turned we have found help and interest. Everywhere we turn, we're met with companionship — from the people we connect with, to the stories they share, and the bridges we continue to build.
+                        </p>
+                    </AppearingBlock>
+                    <AppearingBlock style="flex justify-center">
+                        <p className="text-md tracking-wide leading-6">Companionship fuels us, and we hope it moves you too. Welcome to Student Companions.
+                        </p>
+                    </AppearingBlock>
+                </div>
             </div>
+            
             <Contact />
             <Footer/>
         </main>

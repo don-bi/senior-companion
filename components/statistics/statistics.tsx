@@ -1,22 +1,21 @@
 "use client"
 
 import {  useEffect, useState } from "react";
-import { FaBuildingCircleCheck, FaPeopleArrows, FaPersonCane } from "react-icons/fa6";
+import { HiMiniUserGroup } from "react-icons/hi2";
+import { FaBuildingCircleCheck, FaPeopleArrows} from "react-icons/fa6";
 import styles from "./statistics.module.css";
-import { FaHourglassHalf } from "react-icons/fa";
 
 export default function Statistics() {
     // change these if the statistics ever change
     const totalPartneredCenters = 10;
-    const totalStudents = 100;
-    const totalAdults = 50;
-    const totalHoursOfService = 1000;
+    const totalPairs = 31;
+    const totalStudentOrgs = 4;
+    const totalSeniorOrgs = 3;
 
     const [increasing, setIncreasing] = useState(false);
-    const [partneredCenters, setPartneredCenters] = useState(0);
-    const [students, setStudents] = useState(0);
-    const [adults, setAdults] = useState(0);
-    const [hoursOfService, setHoursOfService] = useState(0);
+    const [pairs, setPairs] = useState(0);
+    const [studentOrgs, setStudentOrgs] = useState(0);
+    const [seniorOrgs, setSeniorOrgs] = useState(0);
 
 
     useEffect(() => {
@@ -38,61 +37,49 @@ export default function Statistics() {
 
     useEffect(() => {
         const increaseStats = () => {
-            if (partneredCenters < totalPartneredCenters) {
+            if (pairs < totalPairs) {
                 setTimeout(() => {
-                    setPartneredCenters(partneredCenters + 1);
-                }, 100)
+                    setPairs(pairs + 1);
+                }, 35)
             }
-            if (students < totalStudents) {
+            if (studentOrgs < totalStudentOrgs) {
                 setTimeout(() => {
-                    setStudents(students + 1);
-                }, 20)
+                    setStudentOrgs(studentOrgs + 1);
+                }, 300)
             }
-            if (adults < totalAdults) {
+            if (seniorOrgs < totalSeniorOrgs) {
                 setTimeout(() => {
-                    setAdults(adults + 1);
-                }, 40)
-            }
-            if (hoursOfService < totalHoursOfService) {
-                setTimeout(() => {
-                    setHoursOfService(hoursOfService + 4);
-                }, 5)
+                    setSeniorOrgs(seniorOrgs + 1);
+                }, 400)
             }
         }
         if (increasing) increaseStats()
-        console.log([partneredCenters, students, adults, hoursOfService]);
-    }, [increasing, partneredCenters, students, adults, hoursOfService])
+        console.log([pairs, studentOrgs, seniorOrgs]);
+    }, [increasing, pairs, studentOrgs, seniorOrgs])
 
     return (
         <div className="flex flex-col items-center gap-4 lg:gap-6">
             {/* <h1 className={styles.ebony}>All-time Statistics</h1> */}
             <div className={`stat-container ${styles.hidden} flex flex-col gap-10`}>
                 <div className="flex items-center gap-4">
-                    <FaBuildingCircleCheck className={`${styles.color} ${styles.icons}`}/>
-                    <div className="flex-col items-center justify-center">
-                        <p className={styles.color}>{partneredCenters}</p>
-                        <p className="font-semibold text-lg text-medium text-green-950">Partnered Senior Centers</p>
-                    </div>
-                </div>
-                <div className="flex items-center gap-4">
                     <FaPeopleArrows className={`${styles.color} ${styles.icons}`}/>
                     <div className="flex-col items-center justify-center">
-                        <p className={styles.color}>{students}</p>
-                        <p className="font-semibold text-lg text-medium text-green-950">Student Companions</p>
+                        <p className={styles.color}>{pairs}</p>
+                        <p className="font-semibold text-lg text-medium text-green-950">Student-Senior Pairs</p>
                     </div>
                 </div>
                 <div className="flex items-center gap-4">
-                    <FaPersonCane className={`${styles.color} ${styles.icons}`}/>
+                    <HiMiniUserGroup className={`${styles.color} ${styles.icons}`}/>
                     <div className="flex-col items-center justify-center">
-                        <p className={styles.color}>{adults}</p>
-                        <p className="font-semibold text-lg text-medium text-green-950">Older Adult Companions</p>
+                        <p className={styles.color}>{studentOrgs}</p>
+                        <p className="font-semibold text-lg text-medium text-green-950">Partnered Student Organizations</p>
                     </div>
                 </div>
                 <div className="flex items-center gap-4">
-                    <FaHourglassHalf className={`${styles.color} ${styles.icons}`}/>
+                    <FaBuildingCircleCheck className={`${styles.color} ${styles.icons}`}/>
                     <div className="flex-col items-center justify-center">
-                        <p className={styles.color}>{hoursOfService}</p>
-                        <p className="font-semibold text-lg text-medium text-green-950">Hours Spent Connecting</p>
+                        <p className={styles.color}>{seniorOrgs}</p>
+                        <p className="font-semibold text-lg text-medium text-green-950">Partnered Senior Centers</p>
                     </div>
                 </div>
             </div>

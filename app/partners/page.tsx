@@ -2,48 +2,35 @@ import Contact from "@/components/contact/contact";
 import Footer from "@/components/footer/footer";
 import Header from "@/components/header/header";
 import styles from "./page.module.css";
-import generic from "@/components/styles/generic.module.css";
 import PartnerIcon from "@/components/partner-icon";
 import partnertest from "@/public/partners/partnertest.png";
+
+import { jeff, ulster, peter, medlife, premed, sunshine, community } from "./image-exports";
 
 export default function Branches() {
     return (
         <main className="bg-slate-50 h-full">
             <Header scroll={false}/>
             <div className={`${styles.branches} w-full flex flex-col items-center`}>
-                <div className={`bg-[#cfeacf] pt-32 pb-12 text-center flex flex-col gap-5 items-center px-[7.5%]`}>
-                    <h1 className="font-bold text-5xl">Partner Branches</h1>
-                    {/* <h2 className="font-semibold text-3xl tracking-wide">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2> */}
-                    <p className="font-medium text-2xl tracking-wide leading-10">Discover the heart of our program by exploring our branches across New York State! Each location represents a unique connection between our college students and senior centers, where these meaningful relationships are nurtured. We are proud to partner with senior centers across the region to bring joy and companionship to our seniors.</p>
+                <div className={`bg-[#bcdbbc] pt-32 py-12 text-center flex flex-col gap-5 items-center px-[7.5%] w-full`}>
+                    <h1 className="font-bold text-5xl">Partner Older Adult Centers</h1>
                 </div>
 
-                <div className="bg-[#e9f2eb] w-full flex flex-col justify-center py-8 gap-36">
-                    <PartnerIcon styles="h-10" imageSrc={partnertest} imageAlt="test" link="/" title="hello" description="test"/>
-                    <PartnerIcon styles="h-10" imageSrc={partnertest} imageAlt="test" link="/" title="hello" description="test"/>
-                    <PartnerIcon styles="h-10" imageSrc={partnertest} imageAlt="test" link="/" title="hello" description="test"/>
-                    <PartnerIcon styles="h-10" imageSrc={partnertest} imageAlt="test" link="/" title="hello" description="test"/>
-                </div>
-
-                <div className={`bg-[#bcdbbc] py-12 text-center flex flex-col gap-5 items-center px-[7.5%] w-full`}>
-                    <h1 className="font-bold text-5xl">Partner Senior Centers</h1>
-                </div>
-
-                <div className="bg-[#e9f2eb] w-full flex flex-col justify-center py-8 gap-36">
-                    <PartnerIcon styles="h-10" imageSrc={partnertest} imageAlt="test" link="/" title="hello" description="test"/>
-                    <PartnerIcon styles="h-10" imageSrc={partnertest} imageAlt="test" link="/" title="hello" description="test"/>
-                    <PartnerIcon styles="h-10" imageSrc={partnertest} imageAlt="test" link="/" title="hello" description="test"/>
-                    <PartnerIcon styles="h-10" imageSrc={partnertest} imageAlt="test" link="/" title="hello" description="test"/>
+                <div className="bg-[#e9f2eb] w-full flex flex-col items-start justify-center py-8 gap-36 px-32">
+                    <PartnerIcon styles="h-10" imageSrc={peter} imageAlt="CCNS Peter J. Dellamonica Older Adult Center" link="https://www.ccbq.org/older-adult-centers/dellamonica-steinway-older-adult-center/" title="CCNS Peter J. Dellamonica Older Adult Center" description=""/>
+                    <PartnerIcon styles="h-10" imageSrc={jeff} imageAlt="Jefferson County Office for the Aging" link="https://www.jeffersoncountyny.gov/departments/OfficefortheAging" title="Jefferson County Office for the Aging" description=""/>
+                    <PartnerIcon styles="h-10" imageSrc={ulster} imageAlt="Ulster County Office for the Aging" link="https://ulstercountyny.gov/aging" title="Ulster County Office for the Aging" description=""/>
                 </div>
 
                 <div className="bg-[#bcdbbc] py-12 text-center flex flex-col gap-5 items-center px-[7.5%] w-full">
                     <h1 className="font-bold text-5xl">Partner Student Volunteer Organizations</h1>
                 </div>
 
-                <div className="bg-[#e9f2eb] w-full flex flex-col justify-center py-8 gap-36">
-                    <PartnerIcon styles="h-10" imageSrc={partnertest} imageAlt="test" link="/" title="hello" description="test"/>
-                    <PartnerIcon styles="h-10" imageSrc={partnertest} imageAlt="test" link="/" title="hello" description="test"/>
-                    <PartnerIcon styles="h-10" imageSrc={partnertest} imageAlt="test" link="/" title="hello" description="test"/>
-                    <PartnerIcon styles="h-10" imageSrc={partnertest} imageAlt="test" link="/" title="hello" description="test"/>
+                <div className="bg-[#e9f2eb] w-full flex flex-col items-start justify-center py-8 gap-36 px-32">
+                    <PartnerIcon styles="h-10" imageSrc={medlife} imageAlt="Medlife Chapter at Stony Brook" link="https://www.medlifemovement.org/ " title="Medlife Chapter at Stony Brook" description="MEDLIFE is a 501(c)(3) non-profit organization that partners with low-income communities in Latin America and Africa to improve access to medicine, education, and community development projects."/>
+                    <PartnerIcon styles="h-10" imageSrc={premed} imageAlt="Pre-Med Society " link="https://stonybrook.campuslabs.com/engage/organization/premedsociety" title="Pre-Med Society " description="The Pre-Med Society of SBU supports the goals and interests of Stony Brook University students considering a career in medicine and to provide them with resources and information to help prepare them for this career."/>
+                    <PartnerIcon styles="h-10" imageSrc={community} imageAlt="Community Service Club at Stony Brook " link="https://stonybrook.campuslabs.com/engage/organization/csc" title="Community Service Club at Stony Brook " description="The Community Service Club at Stony Brook University is dedicated to fostering a spirit of service, empathy, inclusion, and local engagement."/>
+                    <PartnerIcon styles="h-10" imageSrc={sunshine} imageAlt="Project Sunshine" link="https://projectsunshine.org/" title="Project Sunshine " description="Project Sunshine brings volunteer-led programming to pediatric patients and their families in a variety of medical settings."/>
                 </div>
             </div>
 

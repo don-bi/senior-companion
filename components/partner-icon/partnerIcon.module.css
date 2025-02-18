@@ -1,4 +1,6 @@
 .learnButton {
+    width: 10rem;
+    text-align: center;
     background-color: var(--olive-light);
     padding: 0.5rem 1rem;
     border-radius: 10px;
