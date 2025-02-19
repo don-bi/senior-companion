@@ -56,7 +56,7 @@
   display: none;
 }
 
-@media (width < 1250px) { 
+@media (width < 1280px) { 
   .nav {
     z-index: 5;
     display: none;
@@ -71,9 +71,9 @@
     background-color: var(--olive);
     position: sticky;
   }
-  
+
   .scrolled {
-    position: absolute;
+    position: sticky;
   }
 
   .mobileul {
@@ -95,7 +95,7 @@
   }
 
   .show {
-    top: 78px;
+    top: 76.8px;
     transform: translate(0);
     transition: 0.5s;
   }

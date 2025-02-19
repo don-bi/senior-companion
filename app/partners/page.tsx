@@ -11,7 +11,7 @@ export default function Branches() {
         <main className="bg-slate-50 h-full">
             <Header scroll={false}/>
             <div className={`${styles.branches} w-full flex flex-col items-center`}>
-                <div className={`bg-[#bcdbbc] pt-10 md:pt-32 py-12 text-center flex flex-col gap-5 items-center px-[7.5%] w-full`}>
+                <div className={`bg-[#bcdbbc] xl:pt-32 py-12 text-center flex flex-col gap-5 items-center px-[7.5%] w-full`}>
                     <h1 className="font-bold text-5xl">Partner Older Adult Centers</h1>
                 </div>
 

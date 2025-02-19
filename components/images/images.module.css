@@ -137,13 +137,15 @@
 }
 
 /* media queries for width */
-@media (width < 1250px) {
+@media (width < 1280px) {
   .h1, .h2 {
     font-size: 2.5rem;
   }
-
-  .h1  {
-    top: 10%;
+  .h1 {
+    top: 1rem;
+  }
+  .h2 {
+    top: 30.5rem;
   }
 }
 
