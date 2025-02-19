@@ -57,37 +57,37 @@ export default function VolunteerForm() {
             <h1 className="ml-[4%] text-5xl font-semibold tracking-wide mb-10">Register to Volunteer</h1>
             <div className="flex gap-[4%] flex-wrap justify-center">
                 <div className={styles.container}>
-                    <label htmlFor="firstName" className="tracking-wider">First Name <span className='text-red-500'>*</span></label>
+                    <label htmlFor="firstName" className="tracking-wider text-xs md:text-base">First Name <span className='text-red-500'>*</span></label>
                     <input {...register("firstName")} type="text" id="firstName" className={styles.input} placeholder="John"/>
                     <div>{errors.firstName && errors.firstName.message}&nbsp;</div>
                 </div>
                 <div className={styles.container}>
-                    <label htmlFor="lastName" className="tracking-wider">Last Name <span className='text-red-500'>*</span></label>
+                    <label htmlFor="lastName" className="tracking-wider text-xs md:text-base">Last Name <span className='text-red-500'>*</span></label>
                     <input {...register("lastName")} type="text" id="lastName" className={styles.input} placeholder="Doe"/>
                     <div>{errors.lastName && errors.lastName.message}&nbsp;</div>
                 </div>
                 <div className={styles.container}>
-                    <label htmlFor="email" className="tracking-wider">Email <span className='text-red-500'>*</span></label>
+                    <label htmlFor="email" className="tracking-wider text-xs md:text-base">Email <span className='text-red-500'>*</span></label>
                     <input {...register("email")} type="text" id="email" className={styles.input} placeholder="example@email.com"/>
                     <div>{errors.email && errors.email.message}&nbsp;</div>
                 </div>
                 <div className={styles.container}>
-                    <label htmlFor="phone" className="tracking-wider">Phone Number <span className='text-red-500'>*</span></label>
+                    <label htmlFor="phone" className="tracking-wider text-xs md:text-base">Phone Number <span className='text-red-500'>*</span></label>
                     <input {...register("phone")} type="text" id="phone" className={styles.input} placeholder="999-999-9999"/>
                     <div>{errors.phone && errors.phone.message}&nbsp;</div>
                 </div>
                 <div className={styles.container}>
-                    <label htmlFor="address" className="tracking-wider">Address <span className='text-red-500'>*</span></label>
+                    <label htmlFor="address" className="tracking-wider text-xs md:text-base">Address <span className='text-red-500'>*</span></label>
                     <input {...register("address")} type="text" id="address" className={styles.input}/>
                     <div>{errors.address && errors.address.message}&nbsp;</div>
                 </div>
                 <div className={styles.container}>
-                    <label htmlFor="city" className="tracking-wider">City <span className='text-red-500'>*</span></label>
+                    <label htmlFor="city" className="tracking-wider text-xs md:text-base">City <span className='text-red-500'>*</span></label>
                     <input {...register("city")} type="text" id="city" className={styles.input}/>
                     <div>{errors.city && errors.city.message}&nbsp;</div>
                 </div>
                 <div className={styles.container}>
-                    <label htmlFor="state" className="tracking-wider">State <span className='text-red-500'>*</span></label>
+                    <label htmlFor="state" className="tracking-wider text-xs md:text-base">State <span className='text-red-500'>*</span></label>
                     <select {...register("state")} id="state" className={styles.input} required>
                         <option value="NY">New York</option>
                         <option value="AL">Alabama</option>
@@ -143,7 +143,7 @@ export default function VolunteerForm() {
                     </select>
                 </div>
                 <div className={styles.container}>
-                    <label htmlFor="birthdate" className="tracking-wider">Birth Date <span className='text-red-500'>*</span></label>
+                    <label htmlFor="birthdate" className="tracking-wider text-xs md:text-base">Birth Date <span className='text-red-500'>*</span></label>
                     <input {...register("birthdate")} id="birthdate" type="date" className={styles.input} required/>
                     <div>&nbsp;</div>
                 </div>
@@ -153,12 +153,12 @@ export default function VolunteerForm() {
                 <div className="text-xl font-semibold tracking-wide w-full mb-2">ADDITIONAL INFORMATION</div>
                 <div className="w-full flex flex-col items-center px-[2%] py-[2rem] outline outline-green-800 outline-1 rounded-lg">
                     <div className={styles.additionalContainer}>
-                        <label htmlFor="referral" className="tracking-wider">How did you hear about us?</label>
+                        <label htmlFor="referral" className="tracking-wider text-xs md:text-base">How did you hear about us?</label>
                         <input {...register("referral")} type="text" id="referral" className={styles.input}/>
                         <div>&nbsp;</div>
                     </div>
                     <div className={styles.additionalContainer}>
-                        <label htmlFor="comments" className="tracking-wider">Comments</label>
+                        <label htmlFor="comments" className="tracking-wider text-xs md:text-base">Comments</label>
                         <textarea {...register("comments")} rows={4} id="comments" className={styles.textarea}/>
                         <div>&nbsp;</div>
                     </div>

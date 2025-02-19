@@ -18,6 +18,7 @@ export default function Home() {
   return (
     <main className="bg-slate-50">
         <Header scroll={true}/>
+        
         <Images />
 
         <div className="flex-col items-centermd:py-10 overflow-visible">

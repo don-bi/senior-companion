@@ -7,7 +7,7 @@ export default function Branches() {
     return (
         <main className="bg-slate-50 h-full">
             <Header scroll={false}/>
-            <div className="pt-32 bg-[#e9f2eb]">
+            <div className="pt-10 md:pt-32 bg-[#e9f2eb]">
                 <VolunteerForm />
             </div>
 

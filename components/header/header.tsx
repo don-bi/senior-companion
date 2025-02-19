@@ -37,7 +37,7 @@ export default function Header({scroll}: {scroll: boolean}) {
                 <Image src={logo} alt={"logo"} style={{height: "76.8px", width: "auto"}}/>
             </Link>
             <nav className={styles.nav}>
-                <ul className={styles.ul}>
+                <ul className={`${styles.ul} gap-2 md:gap-5`}>
                     <li><Link href={"/"} className={styles.a}>Home</Link></li>
                     <li><Link href={"/about"} className={styles.a}>About Us</Link></li>
                     <li><Link href={"/partners"} className={styles.a}>Our Partners</Link></li>
@@ -59,6 +59,7 @@ export default function Header({scroll}: {scroll: boolean}) {
             <li className={styles.li}><Link href={"/"} className={styles.a}>Home</Link></li>
             <li className={styles.li}><Link href={"/about"} className={styles.a}>About Us</Link></li>
             <li className={styles.li}><Link href={"/partners"} className={styles.a}>Our Partners</Link></li>
+            <li className={styles.li}><Link href={"/volunteer"} className={styles.a}>Get Involved</Link></li>
             <li className={styles.li}><a href="#contact" className={styles.a}>Contact Us</a></li>
         </ul>
     </div>
