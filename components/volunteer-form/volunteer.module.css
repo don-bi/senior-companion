@@ -5,6 +5,12 @@
     gap: 1rem;
 }
 
+@media (width < 768px) {
+    .container {
+        width: 80%;
+    }
+}
+
 .input {
     border-radius: 0.4rem;
     box-shadow: 2px 2px 7px -4px black;

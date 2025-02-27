@@ -55,7 +55,7 @@ export default function VolunteerForm() {
     return (
         <form className="py-[2rem]"  onSubmit={handleSubmit(onSubmit)}>
             <h1 className="ml-[4%] text-5xl font-semibold tracking-wide mb-10">Register to Volunteer</h1>
-            <div className="flex gap-[4%] flex-wrap justify-center">
+            <div className="flex items-center flex-col md:flex-row gap-[4%] justify-center">
                 <div className={styles.container}>
                     <label htmlFor="firstName" className="tracking-wider text-xs md:text-base">First Name <span className='text-red-500'>*</span></label>
                     <input {...register("firstName")} type="text" id="firstName" className={styles.input} placeholder="John"/>
@@ -76,6 +76,8 @@ export default function VolunteerForm() {
                     <input {...register("phone")} type="text" id="phone" className={styles.input} placeholder="999-999-9999"/>
                     <div>{errors.phone && errors.phone.message}&nbsp;</div>
                 </div>
+            </div>
+            <div className="flex items-center md:items-start flex-col md:flex-row gap-[4%] justify-center">
                 <div className={styles.container}>
                     <label htmlFor="address" className="tracking-wider text-xs md:text-base">Address <span className='text-red-500'>*</span></label>
                     <input {...register("address")} type="text" id="address" className={styles.input}/>
@@ -142,7 +144,7 @@ export default function VolunteerForm() {
                         <option value="WY">Wyoming</option>
                     </select>
                 </div>
-                <div className={styles.container}>
+                <div className={`${styles.container} mt-10 md:mt-0`}>
                     <label htmlFor="birthdate" className="tracking-wider text-xs md:text-base">Birth Date <span className='text-red-500'>*</span></label>
                     <input {...register("birthdate")} id="birthdate" type="date" className={styles.input} required/>
                     <div>&nbsp;</div>
