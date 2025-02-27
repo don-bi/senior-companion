@@ -5,6 +5,7 @@ import left from '@/public/left.png';
 import right from '@/public/right.png';
 import React, { useEffect } from "react";
 import styles from "./images.module.css"
+import mobile from '@/public/mobile.png';
 
 export default function Images() {
     useEffect(() => {
@@ -33,6 +34,9 @@ export default function Images() {
                 <Image src={left} alt={"senior looking at computer"} layout="fill" objectFit="cover" className={styles.leftScreen} />
                 <Image src={right} alt={"senior looking at computer"} layout="fill" objectFit="cover" className={styles.rightScreen} />
 
+            </div>
+            <div className={styles.mobile}>
+                <Image src={mobile} alt="home image"></Image>
             </div>
         </React.Fragment>
     )
